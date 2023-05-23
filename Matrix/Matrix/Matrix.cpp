@@ -7,9 +7,9 @@
 template class Matrix<int>;
 template class Matrix<double>;
 
-/*
 template<typename VecType>
-Matrix<VecType>::Matrix(const char* file) :
+Matrix<VecType>::Matrix(const char* file, int r, int c) :
+	rows(r), cols(c),
 	data(r, std::vector<VecType>(c, 0))
 {
 	std::fstream inFile(file);
@@ -36,7 +36,7 @@ Matrix<VecType>::Matrix(const char* file) :
 		}
 	}
 }
-*/
+
 
 template<typename VecType>
 Matrix<VecType>::Matrix() {
